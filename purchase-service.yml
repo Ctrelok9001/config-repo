@@ -1,0 +1,21 @@
+server:
+  port: 8082   # порт purchase-service (можешь поменять если занят)
+
+spring:
+  application:
+    name: purchase-service   # имя сервиса в Eureka
+  cloud:
+    config:
+      uri: http://localhost:8888   # адрес config-server (если у тебя он так запущен)
+      fail-fast: true              # упасть при ошибке конфиг-сервера
+      retry:
+        max-attempts: 6
+        multiplier: 1.5
+        max-interval: 2000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
