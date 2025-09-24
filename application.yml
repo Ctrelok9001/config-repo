@@ -5,15 +5,10 @@ spring:
   application:
     name: api-gateway
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    prefer-ip-address: true
-
-spring:
   cloud:
+    config:
+      enabled: false   # Отключаем проверку Config Server
+
     gateway:
       routes:
         - id: purchase-service
@@ -22,3 +17,10 @@ spring:
             - Path=/purchase/**
           filters:
             - StripPrefix=1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
