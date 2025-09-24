@@ -1,5 +1,5 @@
 server:
-  port: 8080  # Порт для gateway
+  port: 8081  # Порт для gateway
 
 spring:
   application:
