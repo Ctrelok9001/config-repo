@@ -1,5 +1,5 @@
 server:
-  port: 8082   # порт purchase-service (можешь поменять если занят)
+  port: 8083   # порт purchase-service (можешь поменять если занят)
 
 spring:
   application:
