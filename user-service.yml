@@ -1,14 +1,16 @@
 server:
-  port: 0  
+  port: 8084
 
 spring:
   application:
     name: user-service
+
   datasource:
     url: jdbc:postgresql://localhost:5432/usersdb
     username: user
     password: pass
     driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: update

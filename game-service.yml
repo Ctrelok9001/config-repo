@@ -1,14 +1,9 @@
 server:
-  port: 8082
+  port: 8085
 
 spring:
   application:
     name: game-service
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 
 management:
   endpoints:
@@ -20,3 +15,6 @@ logging:
   level:
     root: INFO
     org.springframework.web: DEBUG
+
+custom:
+  greeting: "Hello from Game Service"

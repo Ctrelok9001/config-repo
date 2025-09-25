@@ -1,21 +1,20 @@
 server:
-  port: 8083   # порт purchase-service (можешь поменять если занят)
+  port: 8083
 
 spring:
   application:
-    name: purchase-service   # имя сервиса в Eureka
-  cloud:
-    config:
-      uri: http://localhost:8888   # адрес config-server (если у тебя он так запущен)
-      fail-fast: true              # упасть при ошибке конфиг-сервера
-      retry:
-        max-attempts: 6
-        multiplier: 1.5
-        max-interval: 2000
+    name: purchase-service
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/purchasedb
+    username: purchase
+    password: pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+custom:
+  greeting: "Hello from Purchase Service"
