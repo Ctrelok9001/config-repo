@@ -12,17 +12,20 @@ spring:
           uri: lb://PURCHASE-SERVICE
           predicates:
             - Path=/purchases/**
+          # StripPrefix=0 оставляем, чтобы сервис видел /purchases
           filters:
-            - StripPrefix=1
+            - StripPrefix=0
+
         - id: game-service
           uri: lb://GAME-SERVICE
           predicates:
-            - Path=/game/**
+            - Path=/games/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=0
+
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/users/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=0
