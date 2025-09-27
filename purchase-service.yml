@@ -7,14 +7,25 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/purchasedb
-    username: purchase
-    password: pass
+    username: purchase_user
+    password: password123
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true
+      ddl-auto: update  # автоматически обновляет схему базы при старте
+    show-sql: true     # показывает SQL-запросы в логах
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
 
 custom:
   greeting: "Hello from Purchase Service"
