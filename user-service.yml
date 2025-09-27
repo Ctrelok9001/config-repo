@@ -6,15 +6,19 @@ spring:
     name: user-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/usersdb
-    username: steam_user
-    password: pass
+    url: jdbc:postgresql://localhost:5432/usersdb?characterEncoding=UTF-8
+    username: postgres
+    password: 12345678
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
     show-sql: true
+    open-in-view: false   # Отключаем WARN про lazy loading в веб
+
 
 custom:
   greeting: "Hello from User Service"
