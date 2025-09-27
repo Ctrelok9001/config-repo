@@ -7,7 +7,7 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/usersdb
-    username: user
+    username: steam_user
     password: pass
     driver-class-name: org.postgresql.Driver
 
