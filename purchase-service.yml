@@ -26,6 +26,10 @@ logging:
   level:
     root: INFO
     org.springframework.web: DEBUG
+  charset:
+    console: UTF-8
+    file: UTF-8
+
 
 custom:
   greeting: "Hello from Purchase Service"

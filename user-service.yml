@@ -24,6 +24,14 @@ management:
     web:
       exposure:
         include: health, info, metrics, loggers, prometheus
-        
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+  charset:
+    console: UTF-8
+    file: UTF-8
+
 custom:
   greeting: "Hello from User Service"
