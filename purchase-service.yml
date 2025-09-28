@@ -29,3 +29,21 @@ logging:
 
 custom:
   greeting: "Hello from Purchase Service"
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        slidingWindowType: COUNT_BASED       # окно ошибок по количеству запросов
+        slidingWindowSize: 10                # размер окна (10 запросов)
+        minimumNumberOfCalls: 5              # минимальное число вызовов для оценки
+        failureRateThreshold: 50             # % ошибок для открытия
+        waitDurationInOpenState: 10s         # сколько держать "открытым" перед half-open
+        permittedNumberOfCallsInHalfOpenState: 3
+        slowCallDurationThreshold: 3s        # порог "медленного вызова"
+        slowCallRateThreshold: 50
+    instances:
+      userService:
+        baseConfig: default
+      gameService:
+        baseConfig: default
