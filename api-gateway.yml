@@ -12,7 +12,7 @@ spring:
           uri: lb://PURCHASE-SERVICE
           predicates:
             - Path=/purchases/**
-          # StripPrefix=0 оставляем, чтобы сервис видел /purchases
+         
           filters:
             - StripPrefix=0
 

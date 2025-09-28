@@ -13,11 +13,11 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update          # авто-создание таблиц
+      ddl-auto: update         
       dialect: org.hibernate.dialect.PostgreSQLDialect
       format_sql: true
     show-sql: true
-    open-in-view: false          # отключаем WARN про lazy loading
+    open-in-view: false          
 
 custom:
   greeting: "Hello from User Service"

@@ -13,8 +13,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update  # автоматически обновляет схему базы при старте
-    show-sql: true     # показывает SQL-запросы в логах
+      ddl-auto: update  
+    show-sql: true    
 
 management:
   endpoints:
