@@ -29,3 +29,8 @@ spring:
             - Path=/users/**
           filters:
             - StripPrefix=0
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
