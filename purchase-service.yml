@@ -38,13 +38,13 @@ resilience4j:
   circuitbreaker:
     configs:
       default:
-        slidingWindowType: COUNT_BASED       # окно ошибок по количеству запросов
-        slidingWindowSize: 10                # размер окна (10 запросов)
-        minimumNumberOfCalls: 5              # минимальное число вызовов для оценки
-        failureRateThreshold: 50             # % ошибок для открытия
-        waitDurationInOpenState: 10s         # сколько держать "открытым" перед half-open
+        slidingWindowType: COUNT_BASED       
+        slidingWindowSize: 10                
+        minimumNumberOfCalls: 5              
+        failureRateThreshold: 50             
+        waitDurationInOpenState: 10s         
         permittedNumberOfCallsInHalfOpenState: 3
-        slowCallDurationThreshold: 3s        # порог "медленного вызова"
+        slowCallDurationThreshold: 3s        
         slowCallRateThreshold: 50
     instances:
       userService:
