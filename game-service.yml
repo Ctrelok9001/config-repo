@@ -5,7 +5,8 @@ spring:
   application:
     name: game-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/gamedb
+    #url: jdbc:postgresql://localhost:5432/gamedb
+    url: jdbc:postgresql://game-db:5432/gamedb
     username: game_user
     password: password123
     driver-class-name: org.postgresql.Driver

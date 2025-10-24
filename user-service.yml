@@ -6,7 +6,8 @@ spring:
     name: user-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/userdb?currentSchema=public
+    #url: jdbc:postgresql://localhost:5432/userdb?currentSchema=public
+    url: jdbc:postgresql://user-db:5432/userdb
     username: steam_user
     password: pass
     driver-class-name: org.postgresql.Driver
