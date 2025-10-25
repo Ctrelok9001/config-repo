@@ -7,7 +7,7 @@ spring:
 
   datasource:
     #url: jdbc:postgresql://localhost:5432/purchasedb
-    url: jdbc:postgresql://purchase-db:5432/purchasedb
+    jdbc:postgresql://postgres-purchase:5432purchasedb
     username: purchase_user
     password: password123
     driver-class-name: org.postgresql.Driver
